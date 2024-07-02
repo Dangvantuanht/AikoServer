@@ -465,7 +465,7 @@ generate_config_default(){
 install_rule_list() {
     read -p "Do you want to install rulelist? [y/n] " answer_1
     if [[ "$answer_1" == "y" ]]; then
-        RuleListPath="/etc/Aiko-Server/rulelist"
+        RuleListPath=""
         mkdir -p /etc/Aiko-Server/  # Create directory if it does not exist
         
         if wget https://raw.githubusercontent.com/AikoPanel/AikoServer/master/config/rulelist -O "$RuleListPath"; then
